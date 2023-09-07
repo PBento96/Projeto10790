@@ -38,7 +38,7 @@ namespace Loja10790.View.UserControls
             txtInput.Focus();
         }
 
-        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtInput_TextChanged(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(txtInput.Password))
             {
