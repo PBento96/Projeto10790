@@ -5,9 +5,9 @@ CREATE DATABASE IF NOT EXISTS db_store;
 USE db_store;
 
 CREATE TABLE IF NOT EXISTS t_countries (
-    id INT PRIMARY KEY AUTOINCREMENT,
+    id_country INT PRIMARY KEY,
     name_country VARCHAR(100) NOT NULL,
-    phone_prefix INT NOT NULL,
+    phone_prefix VARCHAR(3) NOT NULL,
     iso2 CHAR(2) NOT NULL,
     iso3 CHAR(3) NOT NULL
 );
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS t_clients (
     is_active BIT NOT NULL,
     loyalty_points INT NOT NULL CHECK (loyalty_points >= 0),
     dob_client DATE,
-    tax_id_client INT NOT NULL,
+    tax_id_client VARCHAR(15) NOT NULL,
     email_client VARCHAR(320),
     phone_client VARCHAR(15),
     landline_client VARCHAR(15),
@@ -53,14 +53,14 @@ CREATE TABLE IF NOT EXISTS t_employees (
     lname_employee VARCHAR(50) NOT NULL,
     is_active BIT NOT NULL,
     login_employee VARCHAR(8) NOT NULL,
-    dob_employeet DATE NOT NULL,
-    tax_id_employee INT NOT NULL,
+    dob_employee DATE NOT NULL,
+    tax_id_employee VARCHAR(15) NOT NULL,
     email_employee VARCHAR(320),
     phone_employee VARCHAR(15),
     landline_employee VARCHAR(15),
     date_hired DATE NOT NULL,
     date_fired DATE,
-    salary_monthly (DECIMAL(10,2)) NOT NULL,
+    salary_monthly DECIMAL(10,2) NOT NULL,
     id_adress INT NOT NULL,
     is_manager BIT NOT NULL,
     is_fulltime BIT NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS t_stores(
     date_open DATE NOT NULL,
     date_close DATE,
     id_gmanager CHAR(8) NOT NULL,
-    tax_id_store INT NOT NULL,
+    tax_id_store VARCHAR(15) NOT NULL,
     landline_store VARCHAR(15),
     email_store VARCHAR(320),
     CONSTRAINT StorePrefix CHECK (
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS t_suppliers (
     is_active BIT NOT NULL,
     date_hired DATE NOT NULL,
     date_fired DATE,
-    tax_id_supplier VARCHAR(20) NOT NULL,
+    tax_id_supplier VARCHAR(15) NOT NULL,
     landline_supplier VARCHAR(15) NOT NULL,
     email_supplier VARCHAR(320)  NOT NULL
 );
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS t_sales (
     id_sale CHAR(20) PRIMARY KEY,
     date_sale DATETIME NOT NULL,
     id_client CHAR(8) NOT NULL,
-    id_emplyee CHAR(8) NOT NULL,
+    id_employee CHAR(8) NOT NULL,
     CONSTRAINT ClientIDFormat
         CHECK (
             (id_client LIKE 'C%' AND
@@ -158,7 +158,8 @@ CREATE TABLE IF NOT EXISTS t_sales (
 CREATE TABLE IF NOT EXISTS t_purchases (
     id_purchase CHAR(20) PRIMARY KEY,
     date_purchase DATETIME NOT NULL,
-    id_suplier CHAR(6) NOT NULL,
+    id_supplier CHAR(6) NOT NULL,
+    id_store CHAR(4) NOT NULL,
     CONSTRAINT SupplierIDFormat
         CHECK (
             (id_supplier LIKE 'SP' AND

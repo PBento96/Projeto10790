@@ -21,3 +21,13 @@ C:\Users\pedro\Desktop\Git_PBento96\classless\C#\Loja10790\obj\Debug\net6.0-wind
 C:\Users\pedro\Desktop\Git_PBento96\classless\C#\Loja10790\obj\Debug\net6.0-windows\Loja10790.pdb
 C:\Users\pedro\Desktop\Git_PBento96\classless\C#\Loja10790\obj\Debug\net6.0-windows\Loja10790.genruntimeconfig.cache
 C:\Users\pedro\Desktop\Git_PBento96\classless\C#\Loja10790\obj\Debug\net6.0-windows\ref\Loja10790.dll
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\View\LoginView.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\View\UserControls\ClearablePasswordBox.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\View\UserControls\ClearableTextBox.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790_Content.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790_MarkupCompile.cache
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790_MarkupCompile.lref

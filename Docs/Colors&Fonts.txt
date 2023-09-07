@@ -1,0 +1,59 @@
+FONTS:
+    Allura Regular
+    Rubik Medium
+
+COLORS:
+    Main Color: #1B4571
+
+    Accent: #FFFFFF
+
+    Triadic Colors:
+        #1b4571
+        #711b45	
+        #45711b
+
+    Monochromatic Colors:
+        #0c1f33
+        #112c48
+        #16385c
+        #1b4571
+        #205286
+        #255e9a
+        #2a6baf
+
+    Complementary Colors:
+        #1b4571	
+        #71471b
+
+    Analogous Colors:
+        #1b4571	
+        #1c1b71	
+        #1b7071
+
+    Shades:
+        #1b4571
+        #183e65
+        #15375a
+        #12304f
+        #102943
+        #0d2238
+        #0a1b2d
+        #081421
+        #050d16
+        #02060b
+        #000000
+
+    Shades:
+        #1b4571
+        #31577f
+        #486a8d
+        #5f7c9b
+        #768fa9
+        #8da2b8
+        #a3b4c6
+        #bac7d4
+        #d1d9e2
+        #e8ecf0
+        #ffffff
+
+    https://www.color-hex.com/color/1b4571
