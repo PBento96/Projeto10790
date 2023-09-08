@@ -77,7 +77,7 @@ namespace Loja10790.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Loja10790;component/view/usercontrols/clearablepasswordbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Loja10790;V1.0.0.0;component/view/usercontrols/clearablepasswordbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\ClearablePasswordBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
