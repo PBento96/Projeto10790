@@ -11,3 +11,7 @@
 
 2023/09/08:
     - Complete DB redesign;
+
+2023/09/12:
+    - Login screen complete (non functional);
+    - Basic main menu layout;
