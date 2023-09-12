@@ -32,7 +32,7 @@
                     <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="LOG IN"
+                <TextBlock Text="THE STORE | 🔒 Employee Login"
                            Foreground="White"
                            FontSize="10"
                            FontFamily="Rubik Medium"
@@ -73,14 +73,18 @@
                        Height="240"/>
 
                 <User_Controls:ClearableTextBox x:Name="txtLoginID"
-                                               Width="200" Height="40"
-                                               Margin="0,60,0,10"
-                                               Placeholder="Username"/>
+                                                Width="200" Height="40"
+                                                Margin="0,60,0,10"
+                                                Placeholder="Username"
+                                                KeyDown="Login_KeyDown"
+                                                TabIndex="1"/>
 
                 <UserControls:ClearablePasswordBox x:Name="txtLoginPassword"
                                                    Width="200" Height="40"
                                                    Margin="0,0,0,20"
-                                                   Placeholder="Password"/>
+                                                   Placeholder="Password"
+                                                   KeyDown="Login_KeyDown"
+                                                   TabIndex="2"/>
 
                 <Button x:Name="btnLogin"
                         Width="100" Height="40"
@@ -89,7 +93,9 @@
                         Content="Login"
                         Foreground="#1B4571"
                         FontSize="20"
-                        FontFamily="Rubik Medium">
+                        FontFamily="Rubik Medium"
+                        Click="btnLogin_Click"
+                        TabIndex="3">
                     
                 </Button>
 

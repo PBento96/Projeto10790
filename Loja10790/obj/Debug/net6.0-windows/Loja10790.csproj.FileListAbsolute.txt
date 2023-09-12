@@ -95,3 +95,7 @@ C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-wind
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790.pdb
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Loja10790.genruntimeconfig.cache
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\ref\Loja10790.dll
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\View\HomeView.g.cs
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\View\HomeView.baml
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\Styles\ButtonStyles.baml
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\obj\Debug\net6.0-windows\App.baml

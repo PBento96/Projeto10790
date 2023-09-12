@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\App.xaml
-4-1220208886
+6-1494843131
 1-320686414
-6-1299378202
+8210779043
 222-236824262
-MainWindow.xaml;View\LoginView.xaml;View\UserControls\ClearablePasswordBox.xaml;View\UserControls\ClearableTextBox.xaml;
+MainWindow.xaml;Styles\ButtonStyles.xaml;View\HomeView.xaml;View\LoginView.xaml;View\UserControls\ClearablePasswordBox.xaml;View\UserControls\ClearableTextBox.xaml;
 
 False
 

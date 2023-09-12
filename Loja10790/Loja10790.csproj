@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\backgroundLogoWhiteTransparent.png" />
     <None Remove="Images\logo.ico" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\logoBlackOnWhite.png" />
@@ -37,10 +38,10 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\backgroundLogoWhiteTransparent.png" />
     <Resource Include="Images\logo.ico" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\logoBlackOnWhite.png" />
