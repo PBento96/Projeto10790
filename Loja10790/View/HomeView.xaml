@@ -82,29 +82,39 @@
             <Grid Grid.Row="1">
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <ScrollViewer VerticalScrollBarVisibility="Auto"
-                              Grid.Column="0">
+                <Expander Grid.Column="0"
+                          Margin="5,5,5,5"
+                          ExpandDirection="Right"
+                          IsExpanded="True"
+                          x:Name="sideMenu">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
 
                     <StackPanel VerticalAlignment="Center"
-                                HorizontalAlignment="Center">
+                                HorizontalAlignment="Center"
+                                Width="200" Margin="0,0,20,0">
 
                         <Button Style="{StaticResource SideMenuButton}"
-                                Content="🛒 Sales"/>
+                                Content="🛒 Sales"
+                                Click="btnSales_Click"/>
                         <Button Style="{StaticResource SideMenuButton}"
-                                Content="🗠 Stock"/>
+                                Content="🗠 Stocks"
+                                Click="btnStocks_Click"/>
                         <Button Style="{StaticResource SideMenuButton}"
-                                Content="👥 Accounts"/>
+                                Content="👥 Accounts"
+                                Click="btnAccounts_Click"/>
                         <Button Style="{StaticResource SideMenuButton}"
-                                Content="👤 My Account"/>
+                                Content="👤 My Account"
+                                Click="btnMyAccount_Click"/>
 
-                    </StackPanel>
+                        </StackPanel>
 
-                </ScrollViewer>
-                
+                    </ScrollViewer>
+                </Expander>
+
                 <Grid Grid.Column="1">
                     
                     <Grid.Background>
@@ -118,19 +128,9 @@
                         </Grid.Background>
 
                         <Image Source="\Images\backgroundLogoWhiteTransparent.png" Stretch="Uniform"/>
-
-                        <ScrollViewer VerticalScrollBarVisibility="Auto"
-                                      Background="Transparent">
-
-                        </ScrollViewer>
-
+                        
+                        <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden" />
                     </Grid>
-
-                    <ScrollViewer VerticalScrollBarVisibility="Auto"
-                              Background="Transparent">
-
-                    </ScrollViewer>
-                    
                 </Grid>
 
             </Grid>

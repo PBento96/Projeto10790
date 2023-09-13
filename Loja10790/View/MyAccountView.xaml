@@ -1,0 +1,241 @@
+﻿<Page x:Class="Loja10790.View.MyAccountView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Loja10790.View" xmlns:User_Controls="clr-namespace:Loja10790.View.User_Controls" xmlns:UserControls="clr-namespace:Loja10790.View.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="800"
+      Title="MyAccountView">
+
+    <Grid Background="White"
+          Height="Auto" Width="Auto"
+          Margin="10,10,10,10">
+        <Border BorderBrush="#1B4571" BorderThickness="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="👤 My Account"
+                               Foreground="#1B4571"
+                               FontSize="12"
+                               FontFamily="Rubik Medium"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <Button x:Name="btnClose"
+                            Background="#711b45"
+                            BorderThickness="0"
+                            Content="CLOSE"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Rubik Medium"
+                            Cursor="Hand"
+                            Grid.Column="3"
+                            Click="btnClose_Click"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnSave"
+                            Background="#45711b"
+                            BorderThickness="0"
+                            Content="SAVE"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Rubik Medium"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnSave_Click"
+                            Margin="5"/>
+                    <Button x:Name="btnCancel"
+                            Background="#711b45"
+                            BorderThickness="0"
+                            Content="CANCEL"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Rubik Medium"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnSave_Click"
+                            Margin="5"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Auto">
+
+                        <Grid Margin="10,10,10,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0">
+                                <TextBlock Text="First Name"
+                                       Foreground="#1B4571"
+                                       FontSize="16"
+                                       FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtFirstName"
+                                                                Placeholder="First Name"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="0">
+                                <TextBlock Text="Last Name"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtLastName"
+                                                                Placeholder="Last Name"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="1">
+                                <TextBlock Text="Tax ID"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtTaxID"
+                                                                Placeholder="Tax ID"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="1">
+                                <TextBlock Text="Date of Birth"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtBirthday"
+                                                                Placeholder="Birthday"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="2">
+                                <TextBlock Text="Hire Date"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtDateHired"
+                                                                Placeholder="Date Hired"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="2">
+                                <TextBlock Text="Terminated on"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtDateFired"
+                                                                Placeholder="Date Fired"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="4">
+                                <TextBlock Text="Email"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtEmail1"
+                                                                Placeholder="Email"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtEmail2"
+                                                                Placeholder="Email"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="4">
+                                <TextBlock Text="Phone Number"
+                                               Foreground="#1B4571"
+                                               FontSize="16"
+                                               FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtPhone1"
+                                                                Placeholder="Phone"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtPhone2"
+                                                                Placeholder="Phone"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="5">
+                                <TextBlock Text=" Home Adress"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtAdressLine1"
+                                                                Placeholder="Adress Line 1"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtAdressLine2"
+                                                                Placeholder="Adress Line 2"/>
+
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtPostcode"
+                                                                Placeholder="Postcode"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="5">
+                                <TextBlock Text="Country/Region"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtCity"
+                                                                Placeholder="City"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtCountry"
+                                                                Placeholder="Country"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="7">
+                                <TextBlock Text="Username"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <User_Controls:ClearableTextBox Margin="5"
+                                                                x:Name="txtUsername"
+                                                                Placeholder="Username"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="8">
+                                <TextBlock Text="New Password"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <UserControls:ClearablePasswordBox Margin="5"
+                                                                x:Name="txtNewPassword"
+                                                                Placeholder="New Password"/></StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="8">
+                                <TextBlock Text="Confirm New Password"
+                                           Foreground="#1B4571"
+                                           FontSize="16"
+                                           FontFamily="Rubik Medium"/>
+                                <UserControls:ClearablePasswordBox Margin="5"
+                                                                x:Name="txtConfirmNewPassword"
+                                                                Placeholder="Confirm New Password"/></StackPanel>
+
+                        </Grid>
+                        
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
+

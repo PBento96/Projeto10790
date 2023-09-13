@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja10790.ViewModel;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -23,14 +24,21 @@ namespace Loja10790.View
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure you wish to close the main window? This will shudown the application.", "Close App?", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            MessageBoxResult result = MessageBox.Show("Are you sure you wish to close the main window?\nThis will shudown the application.", "Close App?", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (result == MessageBoxResult.Yes)
                 Application.Current.Shutdown();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (txtLoginID.txtInput.Text == "admin" && txtLoginPassword.txtInput.Password == "admin")
+            UserValidatorViewModel viewModel = new UserValidatorViewModel();
+
+            viewModel.Username = txtLoginID.Text;
+            viewModel.Password = txtLoginPassword.Password;
+
+            bool loginSuccessful = viewModel.VerifyLogin();
+
+            if (loginSuccessful)
             {
                 try
                 {
@@ -48,6 +56,7 @@ namespace Loja10790.View
                 MessageBox.Show("Incorrect username or password!", "Password Error!", MessageBoxButton.OK, MessageBoxImage.Error);
                 txtLoginPassword.txtInput.Clear();
             }
+
         }
 
         private void Login_KeyDown(object sender, KeyEventArgs e)

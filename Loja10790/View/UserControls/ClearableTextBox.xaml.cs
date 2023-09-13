@@ -49,5 +49,11 @@ namespace Loja10790.View.User_Controls
                 tbPlaceholder.Visibility = Visibility.Hidden;
             }
         }
+        public string Text
+        {
+            get { return txtInput.Text; }
+            set { txtInput.Text = value; }
+        }
+
     }
 }

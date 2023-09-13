@@ -22,7 +22,7 @@ namespace Loja10790.View
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure you wish to close the main window? This will shudown the application.", "Close App?", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            MessageBoxResult result = MessageBox.Show("Are you sure you wish to close the main window?\nThis will shudown the application.", "Close App?", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (result == MessageBoxResult.Yes)
                 Application.Current.Shutdown();
         }
@@ -39,7 +39,7 @@ namespace Loja10790.View
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show("Thank you for using The Store - Management Software! Untill next time!", "Goodbye!", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Thank you for using The Store - Management Software!\nUntill next time!", "Goodbye!", MessageBoxButton.OK, MessageBoxImage.Information);
             try
             {
                 LoginView loginView = new LoginView();
@@ -51,6 +51,32 @@ namespace Loja10790.View
                 MessageBox.Show("Error logging out of application: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+        }
+
+        private void btnSales_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnStocks_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnAccounts_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnMyAccount_Click(object sender, RoutedEventArgs e)
+        {
+            MyAccountView myAccountView = new MyAccountView();
+
+            myAccountView.CloseButtonClicked += MyAccountView_CloseButtonClicked;
+
+            contentFrame.Content = myAccountView;
+        }
+
+        private void MyAccountView_CloseButtonClicked(object sender, EventArgs e)
+        {
+            sideMenu.IsExpanded = true;
         }
     }
 }
