@@ -1,13 +1,22 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Loja10790.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Loja10790.Model
 {
     internal class UserData : DbContext
     {
+        private readonly string _dbFilePath;
+
+        public UserData()
+        {
+            // Initialize _dbFilePath using the DataPath class
+            _dbFilePath = DataPath.FilePath;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\\Data\\db_store.mdf;Integrated Security=True");
+            optionsBuilder.UseSqlServer($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={_dbFilePath};Integrated Security=True");
         }
 
         public DbSet<UserModel> t_logins { get; set; }
@@ -16,6 +25,5 @@ namespace Loja10790.Model
         {
             return t_logins.FirstOrDefault(u => u.user == username);
         }
-
     }
 }

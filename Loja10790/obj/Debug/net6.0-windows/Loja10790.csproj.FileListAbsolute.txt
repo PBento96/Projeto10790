@@ -83,3 +83,4 @@ C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\bin\Debug\net6.0-wind
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\pedro\Desktop\Git_PBento96\Projeto10790\Loja10790\bin\Debug\net6.0-windows\Data\db_store.mdf

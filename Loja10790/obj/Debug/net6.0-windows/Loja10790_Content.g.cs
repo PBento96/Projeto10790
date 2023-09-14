@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/db_store.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logo.ico")]
 
 

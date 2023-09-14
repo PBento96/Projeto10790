@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\db_store.mdf" />
     <None Remove="Images\backgroundLogoWhiteTransparent.png" />
     <None Remove="Images\logo.ico" />
     <None Remove="Images\logo.png" />
@@ -19,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\db_store.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\logo.ico" />
   </ItemGroup>
 
@@ -50,12 +54,6 @@
     <Resource Include="Images\logoBlackTransparent.png" />
     <Resource Include="Images\logoWhiteOnBlack.png" />
     <Resource Include="Images\logoWhiteTransparent.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Data\db_store.mdf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
