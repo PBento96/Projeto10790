@@ -49,11 +49,19 @@ namespace Loja10790.View.User_Controls
                 tbPlaceholder.Visibility = Visibility.Hidden;
             }
         }
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register(
+                "Text",
+                typeof(string),
+                typeof(ClearableTextBox),
+                new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+
         public string Text
         {
-            get { return txtInput.Text; }
-            set { txtInput.Text = value; }
+            get { return (string)GetValue(TextProperty); }
+            set { SetValue(TextProperty, value); }
         }
+
 
     }
 }

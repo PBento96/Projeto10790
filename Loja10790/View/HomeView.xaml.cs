@@ -43,6 +43,7 @@ namespace Loja10790.View
             try
             {
                 LoginView loginView = new LoginView();
+                App.CurrentUser = null;
                 loginView.Show();
                 this.Close();
             }

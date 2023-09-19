@@ -41,9 +41,18 @@ namespace Loja10790.ViewModel
 
                 UserModel user = userData.GetUserByUsername(Username);
 
-                if (user != null && user.password == Password)
+                if (user != null)
                 {
-                    return true;
+                    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(Password, user.password);
+
+                    if (isPasswordValid)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {

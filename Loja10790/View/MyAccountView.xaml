@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="800"
       Title="MyAccountView">
+    
 
     <Grid Background="White"
           Height="Auto" Width="Auto"
@@ -90,10 +91,8 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
-                                <RowDefinition Height="20"/>
                                 <RowDefinition/>
                                 <RowDefinition/>
-                                <RowDefinition Height="20"/>
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
@@ -152,7 +151,7 @@
                                                                 x:Name="txtDateFired"
                                                                 Placeholder="Date Fired"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="4">
+                            <StackPanel Grid.Column="0" Grid.Row="3">
                                 <TextBlock Text="Email"
                                            Foreground="#1B4571"
                                            FontSize="16"
@@ -164,7 +163,7 @@
                                                                 x:Name="txtEmail2"
                                                                 Placeholder="Email"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="1" Grid.Row="4">
+                            <StackPanel Grid.Column="1" Grid.Row="3">
                                 <TextBlock Text="Phone Number"
                                                Foreground="#1B4571"
                                                FontSize="16"
@@ -176,7 +175,7 @@
                                                                 x:Name="txtPhone2"
                                                                 Placeholder="Phone"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="5">
+                            <StackPanel Grid.Column="0" Grid.Row="4">
                                 <TextBlock Text=" Home Adress"
                                            Foreground="#1B4571"
                                            FontSize="16"
@@ -192,7 +191,7 @@
                                                                 x:Name="txtPostcode"
                                                                 Placeholder="Postcode"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="1" Grid.Row="5">
+                            <StackPanel Grid.Column="1" Grid.Row="4">
                                 <TextBlock Text="Country/Region"
                                            Foreground="#1B4571"
                                            FontSize="16"
@@ -204,16 +203,17 @@
                                                                 x:Name="txtCountry"
                                                                 Placeholder="Country"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="7">
+                            <StackPanel Grid.Column="0" Grid.Row="5">
                                 <TextBlock Text="Username"
                                            Foreground="#1B4571"
                                            FontSize="16"
                                            FontFamily="Rubik Medium"/>
                                 <User_Controls:ClearableTextBox Margin="5"
                                                                 x:Name="txtUsername"
-                                                                Placeholder="Username"/>
+                                                                Placeholder="Username"
+                                                                Text="{Binding Username}"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="8">
+                            <StackPanel Grid.Column="0" Grid.Row="6">
                                 <TextBlock Text="New Password"
                                            Foreground="#1B4571"
                                            FontSize="16"
@@ -221,7 +221,7 @@
                                 <UserControls:ClearablePasswordBox Margin="5"
                                                                 x:Name="txtNewPassword"
                                                                 Placeholder="New Password"/></StackPanel>
-                            <StackPanel Grid.Column="1" Grid.Row="8">
+                            <StackPanel Grid.Column="1" Grid.Row="6">
                                 <TextBlock Text="Confirm New Password"
                                            Foreground="#1B4571"
                                            FontSize="16"

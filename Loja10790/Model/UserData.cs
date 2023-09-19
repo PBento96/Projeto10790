@@ -10,7 +10,6 @@ namespace Loja10790.Model
 
         public UserData()
         {
-            // Initialize _dbFilePath using the DataPath class
             _dbFilePath = DataPath.FilePath;
         }
 

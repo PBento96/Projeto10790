@@ -40,6 +40,8 @@ namespace Loja10790.View
 
             if (loginSuccessful)
             {
+                App.CurrentUser = viewModel.Username;
+
                 try
                 {
                     HomeView homeView = new HomeView();

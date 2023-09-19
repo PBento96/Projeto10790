@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace Loja10790.Data
 {
@@ -8,10 +9,27 @@ namespace Loja10790.Data
         {
             get
             {
-                string currentDirectory = Directory.GetCurrentDirectory();
-                string filePath = Path.Combine(currentDirectory, "Data", "db_store.mdf");
+                var parentDirectory = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName;
 
-                return filePath;
+                while (parentDirectory != null)
+                {
+                    if (Directory.GetParent(parentDirectory)?.Name == "Loja10790")
+                    {
+                        parentDirectory = Directory.GetParent(parentDirectory)?.FullName;
+                        break;
+                    }
+
+                    parentDirectory = Directory.GetParent(parentDirectory)?.FullName;
+                }
+
+                if (parentDirectory != null)
+                {
+                    return Path.Combine(Path.Combine(parentDirectory, "Data"), "db_store.mdf");
+                }
+                else
+                {
+                    throw new Exception("The 'Loja10790' directory was not found.");
+                }
             }
         }
     }

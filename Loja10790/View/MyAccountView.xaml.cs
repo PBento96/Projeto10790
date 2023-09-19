@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja10790.ViewModel;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,6 +13,7 @@ namespace Loja10790.View
         public MyAccountView()
         {
             InitializeComponent();
+            DataContext = new MyAccountViewModel();
         }
 
         public event EventHandler CloseButtonClicked;

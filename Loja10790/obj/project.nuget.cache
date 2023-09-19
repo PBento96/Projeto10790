@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+gUPVW2Trg4K5a37RPT+5qibd4daDWuDNVN+1QlJsRhlSp+YK0kETBGXShn/2ECCV5KO3duvve/xIIA/mKhTJg==",
+  "dgSpecHash": "FT5jy999W9KAVBlg5IS4f1yk/GSIGop6xOC7QponDeYb1r9hrbzjNnf8W+fHdhjkuMsJ4CPnc0+D58Mj1/ay6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\pedro\\Desktop\\Git_PBento96\\Projeto10790\\Loja10790\\Loja10790.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
