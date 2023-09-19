@@ -1,23 +1,32 @@
-﻿namespace Loja10790.ViewModel
+﻿using Loja10790;
+using Loja10790.ViewModel;
+
+internal class MyAccountViewModel : ViewModelBase
 {
-    internal class MyAccountViewModel : ViewModelBase
+    private string originalUsername;
+    private string username;
+
+    public string Username
     {
-        private string username;
-        public string Username
+        get { return username; }
+        set
         {
-            get { return username; }
-            set
+            if (username != value)
             {
-                if (username != value)
-                {
-                    username = value;
-                    OnPropertyChanged(nameof(Username));
-                }
+                username = value;
+                OnPropertyChanged(nameof(Username));
             }
         }
-        public MyAccountViewModel()
-        {
-            Username = App.CurrentUser;
-        }
+    }
+
+    public MyAccountViewModel()
+    {
+        originalUsername = App.CurrentUser;
+        Username = originalUsername;
+    }
+
+    public void RevertChanges()
+    {
+        Username = originalUsername;
     }
 }

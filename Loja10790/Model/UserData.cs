@@ -10,7 +10,7 @@ namespace Loja10790.Model
 
         public UserData()
         {
-            _dbFilePath = DataPath.FilePath;
+            _dbFilePath = DataPath.DatabasePath;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

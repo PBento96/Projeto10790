@@ -1,4 +1,5 @@
 ﻿using Loja10790.Model;
+using Loja10790.Model.Loja10790.Model;
 using System;
 
 namespace Loja10790.ViewModel
@@ -43,7 +44,7 @@ namespace Loja10790.ViewModel
 
                 if (user != null)
                 {
-                    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(Password, user.password);
+                    bool isPasswordValid = EncryptionModel.VerifyPassword(Password, user.password);
 
                     if (isPasswordValid)
                     {
@@ -65,6 +66,5 @@ namespace Loja10790.ViewModel
                 return false;
             }
         }
-
     }
 }

@@ -56,5 +56,20 @@ namespace Loja10790.View.UserControls
             set { txtInput.Password = value; }
         }
 
+        public void ShowPassword(bool show)
+        {
+            if (show)
+            {
+                txtInput.Visibility = Visibility.Collapsed;
+                txtVisiblePassword.Visibility = Visibility.Visible;
+                txtVisiblePassword.Text = txtInput.Password;
+            }
+            else
+            {
+                txtInput.Visibility = Visibility.Visible;
+                txtVisiblePassword.Visibility = Visibility.Collapsed;
+                txtInput.Password = txtVisiblePassword.Text;
+            }
+        }
     }
 }

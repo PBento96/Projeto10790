@@ -74,7 +74,7 @@
 
                 <User_Controls:ClearableTextBox x:Name="txtLoginID"
                                                 Width="200" Height="40"
-                                                Margin="0,60,0,10"
+                                                Margin="0,30,0,10"
                                                 Placeholder="Username"
                                                 KeyDown="Login_KeyDown"
                                                 TabIndex="1"/>
@@ -85,6 +85,31 @@
                                                    Placeholder="Password"
                                                    KeyDown="Login_KeyDown"
                                                    TabIndex="2"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                            Margin="0,0,0,20">
+                    <CheckBox Content="Remember Me"
+                              x:Name="chkRememberMe"
+                              VerticalAlignment="Center"                          
+                              Foreground="White"
+                              FontSize="12"
+                              FontFamily="Rubik Medium"
+                              Margin="0,0,0,0"
+                              TabIndex="4"/>
+
+                    <CheckBox Content="Show Password"
+                              x:Name="chkShowPassword"
+                              VerticalAlignment="Center"                            
+                              Foreground="White"
+                              FontSize="12"
+                              FontFamily="Rubik Medium"
+                              Margin="10,0,0,0"
+                              TabIndex="5"
+                              Checked="CheckBox_Checked"
+                              Unchecked="CheckBox_Unchecked"/>      
+
+                </StackPanel>
+
 
                 <Button x:Name="btnLogin"
                         Width="100" Height="40"

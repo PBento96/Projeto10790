@@ -1,13 +1,9 @@
-﻿using Loja10790.ViewModel;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace Loja10790.View
 {
-    /// <summary>
-    /// Interaction logic for MyAccountView.xaml
-    /// </summary>
     public partial class MyAccountView : Page
     {
         public MyAccountView()
@@ -17,7 +13,6 @@ namespace Loja10790.View
         }
 
         public event EventHandler CloseButtonClicked;
-
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -40,5 +35,14 @@ namespace Loja10790.View
         {
 
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MyAccountViewModel viewModel)
+            {
+                viewModel.RevertChanges();
+            }
+        }
+
     }
 }
