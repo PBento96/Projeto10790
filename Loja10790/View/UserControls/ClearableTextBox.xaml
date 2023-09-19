@@ -13,9 +13,10 @@
                  TextChanged="txtInput_TextChanged"
                  TabIndex="1"/>
 
-        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder, UpdateSourceTrigger=PropertyChanged}" FontSize="16" FontWeight="Light"
+        <TextBlock x:Name="tbPlaceholder" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Path=Placeholder, UpdateSourceTrigger=PropertyChanged}" FontSize="16" FontWeight="Light"
                    Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0"
                    Panel.ZIndex="-1"/>
+
         <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X"
                 Background="Transparent" Foreground="LightGray" BorderThickness="0"
                 Click="btnClear_Click"

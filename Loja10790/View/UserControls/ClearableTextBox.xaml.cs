@@ -9,7 +9,6 @@ namespace Loja10790.View.User_Controls
     {
         public ClearableTextBox()
         {
-            DataContext = this;
             InitializeComponent();
         }
 
