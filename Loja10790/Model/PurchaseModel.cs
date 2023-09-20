@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class PurchaseModel
+    public class PurchaseModel
     {
         [Key]
         [Column("id_purchase")]
@@ -15,6 +15,5 @@ namespace Loja10790.Model
 
         [Column("store")]
         public string store { get; set; }
-        public StoreModel store_navigation { get; set; }
     }
 }

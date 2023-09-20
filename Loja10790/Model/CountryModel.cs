@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class CountryModel
+    public class CountryModel
     {
         [Key]
         [Column("id_country")]
@@ -32,5 +32,9 @@ namespace Loja10790.Model
         [Column("iso_num")]
         [MaxLength(6)]
         public string iso_num { get; set; }
+
+        [Column("flag_emoji")]
+        [MaxLength(10)]
+        public string flag_emoji { get; set; }
     }
 }

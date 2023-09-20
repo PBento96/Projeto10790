@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class PurchaseItemModel
+    public class PurchaseItemModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -16,10 +16,8 @@ namespace Loja10790.Model
         [ForeignKey("supply")]
         [Column("supply")]
         public int? supply { get; set; }
-        public SupplyModel supply_navigation { get; set; }
 
         [Column("purchase")]
         public string purchase { get; set; }
-        public PurchaseModel purchase_navigation { get; set; }
     }
 }

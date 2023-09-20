@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class ProductModel
+    public class ProductModel
     {
         [Key]
         [Column("id_product")]

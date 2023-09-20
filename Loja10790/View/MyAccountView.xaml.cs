@@ -43,6 +43,5 @@ namespace Loja10790.View
                 viewModel.RevertChanges();
             }
         }
-
     }
 }

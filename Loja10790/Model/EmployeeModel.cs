@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class EmployeeModel
+    public class EmployeeModel
     {
         [Key]
         [Column("id_employee")]
@@ -13,7 +13,7 @@ namespace Loja10790.Model
 
         [Column("name_fist")]
         [MaxLength(50)]
-        public string name_fist { get; set; }
+        public string name_first { get; set; }
 
         [Column("name_last")]
         [MaxLength(50)]
@@ -45,11 +45,9 @@ namespace Loja10790.Model
         [ForeignKey("contacts")]
         [Column("contacts")]
         public int? contacts { get; set; }
-        public ContactModel contacts_navigation { get; set; }
 
         [ForeignKey("login")]
         [Column("login")]
         public int? login { get; set; }
-        public UserModel login_navigation { get; set; }
     }
 }

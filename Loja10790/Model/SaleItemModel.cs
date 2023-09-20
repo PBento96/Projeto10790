@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class SaleItemModel
+    public class SaleItemModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,10 +18,8 @@ namespace Loja10790.Model
 
         [Column("sale")]
         public string sale { get; set; }
-        public SaleModel sale_navigation { get; set; }
 
         [Column("product")]
         public string product { get; set; }
-        public ProductModel product_navigation { get; set; }
     }
 }

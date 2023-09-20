@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 
@@ -53,28 +54,79 @@ namespace Loja10790.View
 
         }
 
+        private List<FrameworkElement> openPages = new List<FrameworkElement>();
+
         private void btnSales_Click(object sender, RoutedEventArgs e)
         {
+            CloseAllOpenPages();
 
+            SaleManagementView saleManagementView = new SaleManagementView();
+
+            saleManagementView.CloseButtonClicked += Page_CloseButtonClicked;
+
+            contentFrame.Content = saleManagementView;
+
+            openPages.Add(saleManagementView);
         }
-        private void btnStocks_Click(object sender, RoutedEventArgs e)
+
+        private void btnStores_Click(object sender, RoutedEventArgs e)
         {
+            CloseAllOpenPages();
 
+            StoreManagementView storeManagementView = new StoreManagementView();
+
+            storeManagementView.CloseButtonClicked += Page_CloseButtonClicked;
+
+            contentFrame.Content = storeManagementView;
+
+            openPages.Add(storeManagementView);
         }
+
         private void btnAccounts_Click(object sender, RoutedEventArgs e)
         {
+            CloseAllOpenPages();
 
+            AccountManagementView accountManagementView = new AccountManagementView();
+
+            accountManagementView.CloseButtonClicked += Page_CloseButtonClicked;
+
+            contentFrame.Content = accountManagementView;
+
+            openPages.Add(accountManagementView);
         }
         private void btnMyAccount_Click(object sender, RoutedEventArgs e)
         {
+            CloseAllOpenPages();
+
             MyAccountView myAccountView = new MyAccountView();
 
-            myAccountView.CloseButtonClicked += MyAccountView_CloseButtonClicked;
+            myAccountView.CloseButtonClicked += Page_CloseButtonClicked;
 
             contentFrame.Content = myAccountView;
+
+            openPages.Add(myAccountView);
         }
 
-        private void MyAccountView_CloseButtonClicked(object sender, EventArgs e)
+        private void CloseAllOpenPages()
+        {
+            foreach (var page in openPages)
+            {
+                if (page != null)
+                {
+                    contentFrame.Content = null;
+
+                    // Optionally, close any event handlers or resources associated with the page
+                    if (page is IDisposable disposablePage)
+                    {
+                        disposablePage.Dispose();
+                    }
+                }
+            }
+
+            openPages.Clear();
+        }
+
+        private void Page_CloseButtonClicked(object sender, EventArgs e)
         {
             sideMenu.IsExpanded = true;
         }

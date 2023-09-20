@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AccountManagementView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -14,6 +17,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\MyAccountView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SaleManagementView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StoreManagementView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\UserControls\ClearablePasswordBox.xaml.cs">
@@ -27,6 +36,9 @@
     <Page Update="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\AccountManagementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\HomeView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +46,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MyAccountView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SaleManagementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StoreManagementView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\ClearablePasswordBox.xaml">

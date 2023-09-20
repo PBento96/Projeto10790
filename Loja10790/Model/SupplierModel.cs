@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class SupplierModel
+    public class SupplierModel
     {
         [Key]
         [Column("id_supplier")]
@@ -17,10 +17,10 @@ namespace Loja10790.Model
         public bool? is_active { get; set; }
 
         [Column("date_hired")]
-        public DateTime? date_hired { get; set; }
+        public DateTime date_hired { get; set; }
 
         [Column("date_fired")]
-        public DateTime? date_fired { get; set; }
+        public DateTime date_fired { get; set; }
 
         [Column("tax_id")]
         public string tax_id { get; set; }
@@ -28,6 +28,5 @@ namespace Loja10790.Model
         [ForeignKey("contacts")]
         [Column("contacts")]
         public int? contacts { get; set; }
-        public ContactModel contacts_navigation { get; set; }
     }
 }

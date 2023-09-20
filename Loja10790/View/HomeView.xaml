@@ -101,8 +101,8 @@
                                 Content="🛒 Sales"
                                 Click="btnSales_Click"/>
                         <Button Style="{StaticResource SideMenuButton}"
-                                Content="🗠 Stocks"
-                                Click="btnStocks_Click"/>
+                                Content="🗠 Stores"
+                                Click="btnStores_Click"/>
                         <Button Style="{StaticResource SideMenuButton}"
                                 Content="👥 Accounts"
                                 Click="btnAccounts_Click"/>

@@ -3,15 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Loja10790.View" xmlns:User_Controls="clr-namespace:Loja10790.View.User_Controls" xmlns:UserControls="clr-namespace:Loja10790.View.UserControls"
+      xmlns:local="clr-namespace:Loja10790.View"
+      xmlns:User_Controls="clr-namespace:Loja10790.View.User_Controls" 
+      xmlns:UserControls="clr-namespace:Loja10790.View.UserControls"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="800"
+      d:DesignHeight="720" 
+      d:DesignWidth="800"
       Title="MyAccountView">
-
-
-    <Grid Background="White"
-          Height="Auto" Width="Auto"
-          Margin="10,10,10,10">
+    <Grid Background="White" Height="Auto" Width="Auto" Margin="10,10,10,10">
         <Border BorderBrush="#1B4571" BorderThickness="5">
             <Grid>
                 <Grid.RowDefinitions>
@@ -107,7 +106,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtFirstName"
                                     Placeholder="First Name"
-                                    Text="{Binding FirstName, Mode=TwoWay}"/>
+                                    Text="{Binding FirstName, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="0">
                                 <TextBlock Text="Last Name"
@@ -117,7 +117,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtLastName"
                                     Placeholder="Last Name"
-                                    Text="{Binding LastName, Mode=TwoWay}"/>
+                                    Text="{Binding LastName, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="1">
                                 <TextBlock Text="Tax ID"
@@ -127,7 +128,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtTaxID"
                                     Placeholder="Tax ID"
-                                    Text="{Binding TaxID, Mode=TwoWay}"/>
+                                    Text="{Binding TaxID, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="1">
                                 <TextBlock Text="Date of Birth"
@@ -137,7 +139,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtBirthday"
                                     Placeholder="Birthday"
-                                    Text="{Binding DateOfBirth, Mode=TwoWay}"/>
+                                    Text="{Binding DateOfBirth, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="2">
                                 <TextBlock Text="Hire Date"
@@ -147,7 +150,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtDateHired"
                                     Placeholder="Date Hired"
-                                    Text="{Binding HireDate, Mode=TwoWay}"/>
+                                    Text="{Binding HireDate, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="2">
                                 <TextBlock Text="Terminated on"
@@ -157,7 +161,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtDateFired"
                                     Placeholder="Date Fired"
-                                    Text="{Binding TerminationDate, Mode=TwoWay}"/>
+                                    Text="{Binding TerminationDate, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="4">
                                 <TextBlock Text="Email"
@@ -167,11 +172,13 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtEmail1"
                                     Placeholder="Email"
-                                    Text="{Binding Email1, Mode=TwoWay}"/>
+                                    Text="{Binding Email1, Mode=TwoWay}"
+                                    Height="30"/>
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtEmail2"
                                     Placeholder="Email"
-                                    Text="{Binding Email2, Mode=TwoWay}"/>
+                                    Text="{Binding Email2, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="4">
                                 <TextBlock Text="Phone Number"
@@ -181,11 +188,13 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtPhone1"
                                     Placeholder="Phone"
-                                    Text="{Binding PhoneNumber1, Mode=TwoWay}"/>
+                                    Text="{Binding PhoneNumber1, Mode=TwoWay}"
+                                    Height="30"/>
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtPhone2"
                                     Placeholder="Phone"
-                                    Text="{Binding PhoneNumber2, Mode=TwoWay}"/>
+                                    Text="{Binding PhoneNumber2, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="5">
                                 <TextBlock Text=" Home Address"
@@ -195,15 +204,18 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtAdressLine1"
                                     Placeholder="Address Line 1"
-                                    Text="{Binding AddressLine1, Mode=TwoWay}"/>
+                                    Text="{Binding AddressLine1, Mode=TwoWay}"
+                                    Height="30"/>
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtAdressLine2"
                                     Placeholder="Address Line 2"
-                                    Text="{Binding AddressLine2, Mode=TwoWay}"/>
+                                    Text="{Binding AddressLine2, Mode=TwoWay}"
+                                    Height="30"/>
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtPostcode"
                                     Placeholder="Postcode"
-                                    Text="{Binding Postcode, Mode=TwoWay}"/>
+                                    Text="{Binding Postcode, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="5">
                                 <TextBlock Text="Country/Region"
@@ -213,11 +225,21 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtCity"
                                     Placeholder="City"
-                                    Text="{Binding City, Mode=TwoWay}"/>
+                                    Text="{Binding City, Mode=TwoWay}"
+                                    Height="30"/>
                                 <ComboBox Margin="5"
                                           x:Name="cmbCountry"
-                                          SelectedItem="{Binding SelectedCountry, Mode=TwoWay}">
-                                    <ComboBoxItem IsEnabled="False" Content="Select Country/Region"/>
+                                          SelectedItem="{Binding SelectedCountry, Mode=TwoWay}"
+                                          ItemsSource="{Binding CountryShortNames}"
+                                          Height="30">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Emoji}"  Margin="0,0,5,0" />
+                                                <TextBlock Text="{Binding ShortName}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
                                 </ComboBox>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="7">
@@ -228,7 +250,8 @@
                                 <User_Controls:ClearableTextBox Margin="5"
                                     x:Name="txtUsername"
                                     Placeholder="Username"
-                                    Text="{Binding Username, Mode=TwoWay}"/>
+                                    Text="{Binding Username, Mode=TwoWay}"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="0" Grid.Row="8">
                                 <TextBlock Text="New Password"
@@ -237,7 +260,8 @@
                                            FontFamily="Rubik Medium"/>
                                 <UserControls:ClearablePasswordBox Margin="5"
                                     x:Name="txtNewPassword"
-                                    Placeholder="New Password"/>
+                                    Placeholder="New Password"
+                                    Height="30"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Grid.Row="8">
                                 <TextBlock Text="Confirm New Password"
@@ -246,7 +270,8 @@
                                            FontFamily="Rubik Medium"/>
                                 <UserControls:ClearablePasswordBox Margin="5"
                                     x:Name="txtConfirmNewPassword"
-                                    Placeholder="Confirm New Password"/>
+                                    Placeholder="Confirm New Password"
+                                    Height="30"/>
                             </StackPanel>
 
                         </Grid>

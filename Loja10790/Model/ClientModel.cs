@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class ClientModel
+    public class ClientModel
     {
         [Key]
         [Column("id_client")]
@@ -35,6 +35,6 @@ namespace Loja10790.Model
         [ForeignKey("contacts")]
         [Column("contacts")]
         public int? contacts { get; set; }
-        public ContactModel contacts_navigation { get; set; }
+
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Loja10790.Model
 {
-    internal class ContactModel
+    public class ContactModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -26,13 +26,13 @@ namespace Loja10790.Model
         [MaxLength(15)]
         public string phone2 { get; set; }
 
-        [Column("adress_line1")]
+        [Column("address_line1")]
         [MaxLength(100)]
-        public string adress_line1 { get; set; }
+        public string address_line1 { get; set; }
 
-        [Column("adress_line2")]
+        [Column("address_line2")]
         [MaxLength(100)]
-        public string adress_line2 { get; set; }
+        public string address_line2 { get; set; }
 
         [Column("city")]
         [MaxLength(50)]
@@ -45,6 +45,5 @@ namespace Loja10790.Model
         [ForeignKey("country")]
         [Column("country")]
         public int? country { get; set; }
-        public CountryModel country_navigation { get; set; }
     }
 }
