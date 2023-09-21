@@ -2,7 +2,7 @@
 using Loja10790.Model;
 using Loja10790.ViewModel;
 using System.Collections.Generic;
-using static Loja10790.Model.CountryData;
+using System.Linq;
 
 internal class MyAccountViewModel : ViewModelBase
 {
@@ -232,9 +232,9 @@ internal class MyAccountViewModel : ViewModelBase
         }
     }
 
-    private List<CountryInfo> countryShortNames;
+    private List<string> countryShortNames;
 
-    public List<CountryInfo> CountryShortNames
+    public List<string> CountryShortNames
     {
         get { return countryShortNames; }
         set
@@ -251,26 +251,19 @@ internal class MyAccountViewModel : ViewModelBase
     {
         originalUsername = App.CurrentUser;
         Username = originalUsername;
-
-        var countryData = new CountryData();
-        CountryShortNames = countryData.GetCountryNamesWithEmoji();
-        GetMyAccountData();
+        LoadData();
     }
 
-    public void RevertChanges()
+    private void LoadData()
     {
-        Username = originalUsername;
-        GetMyAccountData();
-    }
-
-    public void GetMyAccountData()
-    {
-        using (var userData = new UserData())
+        using (var context = new AppDbContext())
         {
-            var user = userData.GetUserByUsername(originalUsername);
+            var user = context.GetUserByUsername(originalUsername);
+
             if (user != null)
             {
-                var employee = userData.GetEmployeebByUserID(user.id_login);
+                var employee = context.t_employees.FirstOrDefault(e => e.login == user.id_login);
+
                 if (employee != null)
                 {
                     FirstName = employee.name_first;
@@ -280,8 +273,7 @@ internal class MyAccountViewModel : ViewModelBase
                     HireDate = employee.date_hired.HasValue ? employee.date_hired.Value.ToString("yyyy/MM/dd") : string.Empty;
                     TerminationDate = employee.date_fired.HasValue ? employee.date_fired.Value.ToString("yyyy/MM/dd") : string.Empty;
 
-                    /*
-                    var contact = userData.GetEmployeeContacts(employee.contacts);
+                    var contact = employee.contacts.HasValue ? context.GetContactById(employee.contacts.Value) : null;
 
                     if (contact != null)
                     {
@@ -296,7 +288,7 @@ internal class MyAccountViewModel : ViewModelBase
 
                         if (contact.country != null)
                         {
-                            var country = userData.GetCountry(contact.country);
+                            var country = context.GetCountryById(contact.country.Value);
 
                             if (country != null)
                             {
@@ -323,7 +315,7 @@ internal class MyAccountViewModel : ViewModelBase
                         Postcode = string.Empty;
                         City = string.Empty;
                         SelectedCountry = string.Empty;
-                    }*/
+                    }
                 }
                 else
                 {
@@ -345,5 +337,11 @@ internal class MyAccountViewModel : ViewModelBase
                 }
             }
         }
+    }
+
+    public void RevertChanges()
+    {
+        Username = originalUsername;
+        LoadData();
     }
 }

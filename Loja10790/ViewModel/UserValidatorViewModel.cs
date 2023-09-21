@@ -38,27 +38,21 @@ namespace Loja10790.ViewModel
         {
             try
             {
-                UserData userData = new UserData();
-
-                UserModel user = userData.GetUserByUsername(Username);
-
-                if (user != null)
+                using (var dbContext = new AppDbContext())
                 {
-                    bool isPasswordValid = EncryptionModel.VerifyPassword(Password, user.password);
+                    UserModel user = dbContext.GetUserByUsername(Username);
 
-                    if (isPasswordValid)
+                    if (user != null)
                     {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        bool isPasswordValid = EncryptionModel.VerifyPassword(Password, user.password);
+
+                        if (isPasswordValid)
+                        {
+                            return true;
+                        }
                     }
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
             catch (Exception ex)
             {

@@ -93,7 +93,7 @@
 
                     <User_Controls:ClearableTextBox x:Name="txtSearch"
                                                     Margin="10,5,5,5"
-                                                    Placeholder="TAX ID"/>
+                                                    Placeholder="SEARCH ID"/>
 
                     <Button x:Name="btnSearch"
                             Background="#1B4571"

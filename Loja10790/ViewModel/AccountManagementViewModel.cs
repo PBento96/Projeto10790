@@ -13,27 +13,22 @@ namespace Loja10790.ViewModel
         {
             Clients = new ObservableCollection<ClientModel>();
             Employees = new ObservableCollection<EmployeeModel>();
+            LoadData();
         }
-
-        public void LoadClients()
+        internal void LoadData()
         {
-            using (var context = new ClientData())
+            using (var context = new AppDbContext())
             {
-                var clients = context.t_clients.ToList();
                 Clients.Clear();
+                Employees.Clear();
+
+                var clients = context.t_clients.ToList();
                 foreach (var client in clients)
                 {
                     Clients.Add(client);
                 }
-            }
-        }
 
-        public void LoadEmployees()
-        {
-            using (var context = new UserData())
-            {
                 var employees = context.t_employees.ToList();
-                Employees.Clear();
                 foreach (var employee in employees)
                 {
                     Employees.Add(employee);

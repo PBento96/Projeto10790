@@ -57,7 +57,7 @@ namespace Loja10790.View
 
         private void btnEmployeeAccounts_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.LoadEmployees();
+            ViewModel.LoadData();
             dgAccounts.ItemsSource = ViewModel.Employees;
             dgAccounts.Visibility = Visibility.Visible;
 
@@ -87,16 +87,25 @@ namespace Loja10790.View
             {
                 Header = "Date Hired",
                 Binding = new Binding("date_hired")
+                {
+                    StringFormat = "yyyy/MM/dd"
+                }
             });
             dgAccounts.Columns.Add(new DataGridTextColumn
             {
                 Header = "Date Fired",
                 Binding = new Binding("date_fired")
+                {
+                    StringFormat = "yyyy/MM/dd"
+                }
             });
             dgAccounts.Columns.Add(new DataGridTextColumn
             {
                 Header = "Date of Birth",
                 Binding = new Binding("date_birth")
+                {
+                    StringFormat = "yyyy/MM/dd"
+                }
             });
             dgAccounts.Columns.Add(new DataGridCheckBoxColumn
             {
@@ -117,7 +126,7 @@ namespace Loja10790.View
 
         private void btnClientAccounts_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.LoadClients();
+            ViewModel.LoadData();
             dgAccounts.ItemsSource = ViewModel.Clients;
             dgAccounts.Visibility = Visibility.Visible;
 
@@ -152,6 +161,9 @@ namespace Loja10790.View
             {
                 Header = "Date of Birth",
                 Binding = new Binding("date_birth")
+                {
+                    StringFormat = "yyyy/MM/dd"
+                }
             });
             dgAccounts.Columns.Add(new DataGridTextColumn
             {
