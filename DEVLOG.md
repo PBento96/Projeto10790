@@ -42,7 +42,7 @@
 2023/09/21:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Consolidated data context files into one for simplicity and bug fixes;<br>
 
--- Project Deadline Reached --
+-- Project Deadline Reached -- <br>
 The state of the project as of 2023/09/21 is what was submited as my school project.
 Further development past this point will be done in my free time.
 ----
