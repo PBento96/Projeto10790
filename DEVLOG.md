@@ -46,9 +46,12 @@
 The state of the project as of 2023/09/21 is what was submited as my school project.
 Further development past this point will be done in my free time.
 ----
-
+<br>
+2023/10/04:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Fixed System.Data.SqlTypes.SqlNullValueException when GetEmployeeContacts is called by MyAccountViewModel;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Added missing .gitignore file to repo;<br>
+<br>
 TODO:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;- Fix EF null reference bug when calling contacts table (CRITICAL);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Add CRUD functionality to employee and customer accounts;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Create Store management page;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Create Sale management page;<br>
